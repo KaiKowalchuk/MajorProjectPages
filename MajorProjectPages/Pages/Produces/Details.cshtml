@@ -1,0 +1,55 @@
+﻿@page
+@model MajorProjectPages.Pages.Produces.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Produce</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.ProduceName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.ProduceName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.InStock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.InStock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.UnitsSold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.UnitsSold)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.CategoryObj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.CategoryObj.CategoryName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Produce.AisleObj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Produce.AisleObj.AisleName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Produce.ProduceID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
